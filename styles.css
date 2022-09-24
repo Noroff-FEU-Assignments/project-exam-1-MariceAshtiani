@@ -41,6 +41,8 @@ a{
 .nav-menu{
     display: flex;
     gap: 20px;
+    position: inherit;
+    border: solid black;
 }
 
 .nav-link {
@@ -66,6 +68,82 @@ a{
     background-color:black;
 }
 
+.active {
+    text-decoration: underline;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid darkblue;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*Homepage*/ 
+
+.index-main {
+    display: grid;
+    place-items: center;
+}
+
+.slider {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.slide {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: black;
+    color: #E5C3C3;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn:active {
+    transform: scale(1.1);
+}
+
+.prev-button {
+    top: 45%;
+    left:2%;
+}
+
+.next-button {
+    top: 45%;
+    right: 2%;
+}
+
+
 /*Blogposts*/
 
 .post-container {
@@ -77,6 +155,8 @@ a{
     border: solid #E5C3C3;
     border-radius: 20px;
     margin: 30px;
+    background-color: white;
+    padding: 10px;
 }
 
 .post-preview h2 {
@@ -85,11 +165,6 @@ a{
 
 figcaption {
     display: none;
-}
-
-.wp-image-71, .wp-image-72, .wp-image-73, .wp-image-74, .wp-image-75, .wp-image-66, .wp-image-67, .wp-image-68, .wp-image-61, .wp-image-62, .wp-image-63, .wp-image-57, .wp-image-58, .wp-image-52, .wp-image-53, .wp-image-54, .wp-image-43, .wp-image-44, .wp-image-45, .wp-image-47, .wp-image-48, .wp-image-38, .wp-image-39, .wp-image-40, .wp-image-32, .wp-image-33, .wp-image-34, .wp-image-35, .wp-image-26, .wp-image-28, .wp-image-29, .wp-image-21, .wp-image-22, .wp-image-23, .wp-image-16, .wp-image-17, .wp-image-18, .wp-image-9, .wp-image-10, .wp-image-12{
-    width: 500px;
-    height: auto;
 }
 
 .load-more {
@@ -101,6 +176,76 @@ figcaption {
     border-radius:5px;
     display: block;
     margin: 0 auto;
+}
+
+/* Post specific*/ 
+
+figure.wp-block-image.size-full {
+    max-width: 400px;
+}
+
+.single-post {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.wp-image-71, .wp-image-66,  .wp-image-61, .wp-image-57, .wp-image-58, .wp-image-52, .wp-image-43, .wp-image-38, .wp-image-32, .wp-image-26, .wp-image-21, .wp-image-16, .wp-image-77{
+    max-width: 700px;
+    height: auto;
+    border: solid #E5C3C3;
+    border-radius: 20px;
+}
+
+.wp-image-72, .wp-image-73, .wp-image-74, .wp-image-75,  .wp-image-67, .wp-image-68, .wp-image-62, .wp-image-63, .wp-image-53, .wp-image-54, .wp-image-44, .wp-image-45, .wp-image-47, .wp-image-48, .wp-image-39, .wp-image-40, .wp-image-33, .wp-image-34, .wp-image-35,.wp-image-28, .wp-image-29, .wp-image-22, .wp-image-23, .wp-image-17, .wp-image-18, .wp-image-79, .wp-image-12{
+    max-width: 400px;
+    height: auto;
+    border: solid #E5C3C3;
+    border-radius: 20px;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0,25rem;
+    background-color: lightgray;
+}
+
+.close-button:hover {
+    background-color: darkgray;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
 /*About*/
@@ -140,7 +285,16 @@ h1 {
     width:99%;
     max-height: 300px;
     margin-bottom:40px;
-    
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.about-image-first img:hover {
+    transform: scale(0.9);
+}
+
+.about-image-second img:hover {
+    transform: scale(0.9);
 }
 
 /*Contact*/
@@ -191,6 +345,9 @@ input{
 }
 
 .submit-btn{
+    grid-row: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
     width: 20%;
     height: 50px;
     color:#E5C3C3;
