@@ -7,7 +7,6 @@ const id = params.get("id");
 console.log(id);
 
 const url = "https://zelda-epona.site/stylex/wp-json/wp/v2/posts/" + id;
-console.log(url);
 
 async function fetchPost() {
 
@@ -19,7 +18,15 @@ async function fetchPost() {
         
         createHtml(specific);
 
-        //title.innerHTML = `${specific[0].title.rendered}`;
+        const parser = new DOMParser();
+        const content1 = specific;
+        const parsedDocument = parser.parseFromString(
+            content1.content.rendered, "text/html"
+        );
+        const img = parsedDocument.querySelector("img");
+        console.log(img);
+
+        title.innerHTML = `Stylex | ${specific.title.rendered}`;
 
     } catch(error) {
         console.log(error);
@@ -38,12 +45,7 @@ function createHtml(specific) {
                                 `
 }
 
-const images = document.querySelector("figure img");
-
-
-
-
-
+//image-modal 
 const modal = document.querySelector(".modal");
 const trigger = document.querySelector(".trigger");
 const closeButton = document.querySelector(".close-button");

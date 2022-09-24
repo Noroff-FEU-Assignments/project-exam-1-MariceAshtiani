@@ -17,6 +17,8 @@ async function getCarouselPost() {
                                         <p>${results[i].excerpt.rendered}</p>
                                         </div>`
         }
+
+        createSlider();
     } catch (error) {
         console.log(error);
         carouselPost.innerHTML = message("error", error);
@@ -26,42 +28,45 @@ async function getCarouselPost() {
 getCarouselPost();
 
 
-const slides = document.querySelectorAll(".slide");
-
-slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${indx * 100}%)`;
-});
-
-const nextSlide = document.querySelector(".next-button");
-
-let curSlide = 0;
-
-let maxSlide = slides.length -1;
-
-nextSlide.addEventListener("click", function() {
-    if (curSlide === maxSlide) {
-        curSlide = 0;
-    } else {
-        curSlide++;
-    }
-
+function createSlider() {
+    const slides = document.querySelectorAll(".slide");
+    
     slides.forEach((slide, indx) => {
-        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+        slide.style.transform = `translateX(${indx * 100}%)`;
     });
-});
 
-const prevSlide = document.querySelector(".prev-button");
+    const nextSlide = document.querySelector(".next-button");
 
-prevSlide.addEventListener("click", function() {
-    if (curSlide === 0) {
-        curSlide = maxSlide;
-    } else {
-        curSlide--;
-    }
+    let curSlide = 0;
 
-    slides.forEach((slide, indx) => {
-        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-        console.log(indx);
+    let maxSlide = slides.length -1;
+
+    nextSlide.addEventListener("click", function() {
+        if (curSlide === maxSlide) {
+            curSlide = 0;
+        } else {
+            curSlide++;
+        }
+
+        slides.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+        });
     });
-});
+
+    const prevSlide = document.querySelector(".prev-button");
+
+    prevSlide.addEventListener("click", function() {
+        if (curSlide === 0) {
+            curSlide = maxSlide;
+        } else {
+            curSlide--;
+        }
+
+        slides.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+            console.log(indx);
+        });
+    });
+
+}
 

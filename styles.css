@@ -102,6 +102,8 @@ a{
     max-width: 800px;
     height: 350px;
     position: relative;
+    display: flex;
+    flex-direction: row;
     overflow: hidden;
     border-radius: 20px;
 }
