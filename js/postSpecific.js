@@ -17,16 +17,18 @@ async function fetchPost() {
         console.log(specific);
         
         createHtml(specific);
+        
 
-        const parser = new DOMParser();
-        const content1 = specific;
-        const parsedDocument = parser.parseFromString(
-            content1.content.rendered, "text/html"
-        );
-        const img = parsedDocument.querySelector("img");
-        console.log(img);
+     //   const parser = new DOMParser();
+       // const content1 = specific;
+        //const parsedDocument = parser.parseFromString(
+          //  content1.content.rendered, "text/html"
+        //);
+        //const img = parsedDocument.querySelector("img");
+        //console.log(img);
 
         title.innerHTML = `Stylex | ${specific.title.rendered}`;
+        
 
     } catch(error) {
         console.log(error);
@@ -45,21 +47,20 @@ function createHtml(specific) {
                                 `
 }
 
-//image-modal 
+const trigger = postSpecific.querySelectorAll("img");
 const modal = document.querySelector(".modal");
-const trigger = document.querySelector(".trigger");
-const closeButton = document.querySelector(".close-button");
 
-function toggleModal () {
+
+function toggleModal() {
     modal.classList.toggle("show-modal");
 }
 
 function windowOnClick(event) {
-    if ( event.target === modal) {
+    if (event.target === modal) {
         toggleModal();
     }
 }
 
-trigger.addEventListener("click", toggleModal);
-closeButton.addEventListener("cllick", toggleModal);
-window.addEventListener("click", windowOnClick);
+    trigger.addEventListener("click", toggleModal);
+    window.addEventListener("click", windowOnClick);
+

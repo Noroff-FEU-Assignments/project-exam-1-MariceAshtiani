@@ -114,6 +114,9 @@ a{
     height: 350px;
     position: absolute;
     transition: all 0.5s;
+    background-color: white;
+    border: solid #E5C3C3;
+    padding: 60px;
 }
 
 .btn {
@@ -123,7 +126,7 @@ a{
     padding: 10px;
     border: none;
     border-radius: 50%;
-    z-index: 10px;
+    z-index: 10;
     cursor: pointer;
     background-color: black;
     color: #E5C3C3;
@@ -227,20 +230,6 @@ figure.wp-block-image.size-full {
     padding: 1rem 1.5rem;
     width: 24rem;
     border-radius: 0.5rem;
-}
-
-.close-button {
-    float: right;
-    width: 1.5rem;
-    line-height: 1.5rem;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 0,25rem;
-    background-color: lightgray;
-}
-
-.close-button:hover {
-    background-color: darkgray;
 }
 
 .show-modal {
