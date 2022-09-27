@@ -42,7 +42,12 @@ a{
     display: flex;
     gap: 20px;
     position: inherit;
-    border: solid black;
+    max-width: 200px;
+}
+
+.navbar {
+    margin-left: 15%; 
+    margin-bottom: 50px;
 }
 
 .nav-link {
@@ -56,6 +61,7 @@ a{
 .hamburger{
     display:none;
     cursor:pointer;
+    position: absolute;
 }
 
 .bar{
@@ -68,7 +74,7 @@ a{
     background-color:black;
 }
 
-.active {
+.current-page {
     text-decoration: underline;
 }
 
@@ -106,6 +112,7 @@ a{
     flex-direction: row;
     overflow: hidden;
     border-radius: 20px;
+    margin: 20px 50px;
 }
 
 .slide {
@@ -147,6 +154,13 @@ a{
     top: 45%;
     right: 2%;
 }
+
+.view {
+    text-decoration: underline;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
 
 
 /*Blogposts*/
@@ -347,6 +361,7 @@ input{
     border-radius:5px;
     display: block;
     margin: 0 auto;
+    margin-top: 50px;
 }
 
 /*Footer*/
@@ -355,27 +370,60 @@ footer {
     border: solid #E5C3C3;
     margin-top: 30px;
     margin-bottom: 0px;
+    padding: 10px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
 }
 
 .copyright {
     color: white;
-    margin: 20px 50px;
-    display: inline-block;
+    font-size: 2vmax;
+    grid-column: 1;
+    padding-top: 5px;
 }
 
 .social-media {
     color: white;
-    margin: 15px 50px;
-    display: inline-block;
-    float: right;
+    font-size: 2vmax;
+    grid-column: 2;
 }
 
 .social-media a{
     color: white;
 }
 
+@media (max-width: 1080px) {
+
+
+    /*Contact*/
+.contact h1{
+    margin-bottom: 20px;
+}
+
+    #contactform{
+        display: block;
+        max-width: 700px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    input {
+        margin-bottom:30px;
+    }
+
+
+}
+
 @media(max-width:768px){
 
+    .navbar {
+        margin-left: 5%;
+    }
+       
     .logo-desktop {
         display: none;
     }
@@ -386,7 +434,7 @@ footer {
     .hamburger{
         display:block;
         float: left;
-        top:20px;
+        top: 3%;
     }
 
     .hamburger.active .bar:nth-child(2){
@@ -420,4 +468,28 @@ footer {
     .nav-menu.active{
         left: 0;
     }
+
+    /*contact*/
+.contact h1{
+    font-size: 3vmax;
 }
+
+label, input {
+    font-size: 2vmax;
+}
+
+input {
+    margin-bottom:10px;
+}
+
+.submit-btn {
+   width: 40%; 
+}
+
+    /*footer*/
+
+
+
+
+}
+

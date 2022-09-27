@@ -14,20 +14,9 @@ async function fetchPost() {
         const response = await fetch(url);
         const specific = await response.json();
 
-        console.log(specific);
-        
-        createHtml(specific);
-        
-
-     //   const parser = new DOMParser();
-       // const content1 = specific;
-        //const parsedDocument = parser.parseFromString(
-          //  content1.content.rendered, "text/html"
-        //);
-        //const img = parsedDocument.querySelector("img");
-        //console.log(img);
-
         title.innerHTML = `Stylex | ${specific.title.rendered}`;
+
+        return specific;
         
 
     } catch(error) {
@@ -35,8 +24,6 @@ async function fetchPost() {
         postSpecific.innerHTML = message("error", error);
     }
 }
-
-fetchPost ();
 
 function createHtml(specific) {
 
@@ -47,8 +34,15 @@ function createHtml(specific) {
                                 `
 }
 
-const trigger = postSpecific.querySelectorAll("img");
 const modal = document.querySelector(".modal");
+const parser = new DOMParser();
+
+function extractImagesProperly(htmlString) {
+    const doc = parser.parseFromString(htmlString, "text/html");
+    return doc.querySelectorAll("img")
+}
+
+const imgs = extractImagesProperly(post.content.rendered);
 
 
 function toggleModal() {
@@ -61,6 +55,15 @@ function windowOnClick(event) {
     }
 }
 
-    trigger.addEventListener("click", toggleModal);
-    window.addEventListener("click", windowOnClick);
+async function fetchAll() {
+    const post = await fetchPost();
+    createHtml(post)
+    document.querySelectorAll("img").forEach(function(img) {
+        img.addEventListener("click", toggleModal)
+        window.addEventListener("click", windowOnClick);
+    })
 
+    return "ready!";
+}
+
+fetchAll().then(console.log);
