@@ -156,6 +156,14 @@ h1 {
 .homeModalImg {
     width: 80%;
     max-width: 700px;
+}
+
+.home-modal.appear {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.home-modal.appear .homeModalImg {
     animation: zoom 0.3s linear;
 }
 
