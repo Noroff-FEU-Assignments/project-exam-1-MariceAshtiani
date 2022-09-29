@@ -3,6 +3,13 @@ const morePosts = document.querySelector(".load-more");
 
 let pageNumber = 0
 
+const parser = new DOMParser();
+
+function extractImages(htmlString) {
+    const doc = parser.parseFromString(htmlString, 'text/html');
+    return doc.querySelectorAll('img');
+}
+
 async function getPosts() {
     pageNumber = pageNumber + 1;
 
@@ -24,11 +31,20 @@ async function getPosts() {
         for(let i = 0; i < results.length; i++) {
             console.log(results[i]);
 
+            const images = [...extractImages(results[i].content.rendered)];
+
+            const imageTags = images.map(
+                (image) => `<img src="${image.src}" alt ="image" class="post-image"/>`,
+            );
+
             postContainer.innerHTML += `<div class="post-preview"> 
                                         <a class="post-specific" href="blogspecific.html?id=${results[i].id}">
                                         <h2>${results[i].title.rendered}</h2>
-                                        <p>${results[i].excerpt.rendered}</p>
+                                        <div class="post-content">
+                                        ${imageTags[0]}
+                                        <div class="post-text">${results[i].excerpt.rendered}</div>
                                         </a>
+                                        </div>
                                         </div>`
         }
     } catch (error) {

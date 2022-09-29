@@ -4,6 +4,13 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
+const parser = new DOMParser();
+
+function extractImages(htmlString) {
+    const doc = parser.parseFromString(htmlString, 'text/html');
+    return doc.querySelectorAll('img');
+}
+
 console.log(id);
 
 const url = "https://zelda-epona.site/stylex/wp-json/wp/v2/posts/" + id;
@@ -16,6 +23,12 @@ async function fetchPost() {
 
         title.innerHTML = `Stylex | ${specific.title.rendered}`;
 
+        const images = [...extractImages(specific.content.rendered)];
+
+        const imageTags = images.map(
+            (image) => `<img src="${image.src}" alt ="image" class="specific-image"/>`,
+        );
+
         return specific;
         
 
@@ -26,6 +39,7 @@ async function fetchPost() {
 }
 
 function createHtml(specific) {
+    
 
     postSpecific.innerHTML = ` <div class="single-post"> 
                                 <h1>${specific.title.rendered}</h1>
@@ -35,15 +49,6 @@ function createHtml(specific) {
 }
 
 const modal = document.querySelector(".modal");
-const parser = new DOMParser();
-
-function extractImagesProperly(htmlString) {
-    const doc = parser.parseFromString(htmlString, "text/html");
-    return doc.querySelectorAll("img")
-}
-
-const imgs = extractImagesProperly(post.content.rendered);
-
 
 function toggleModal() {
     modal.classList.toggle("show-modal");

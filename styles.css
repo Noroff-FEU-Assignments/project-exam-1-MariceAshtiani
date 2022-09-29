@@ -46,7 +46,7 @@ a{
 }
 
 .navbar {
-    margin-left: 15%; 
+    margin-left: 20%; 
     margin-bottom: 50px;
 }
 
@@ -94,6 +94,10 @@ a{
     100% {
         transform: rotate(360deg);
     }
+}
+
+h1 {
+    font-size: 3vmax;
 }
 
 /*Homepage*/ 
@@ -186,6 +190,15 @@ figcaption {
     display: none;
 }
 
+
+.post-image {
+    max-width: 300px;
+    width: 90%;
+    border: solid #E5C3C3;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
 .load-more {
     width: 20%;
     height: 50px;
@@ -208,14 +221,14 @@ figure.wp-block-image.size-full {
     margin: 0 auto;
 }
 
-.wp-image-71, .wp-image-66,  .wp-image-61, .wp-image-57, .wp-image-58, .wp-image-52, .wp-image-43, .wp-image-38, .wp-image-32, .wp-image-26, .wp-image-21, .wp-image-16, .wp-image-77{
+.wp-image-153, .wp-image-160,  .wp-image-164, .wp-image-168, .wp-image-169, .wp-image-171, .wp-image-175, .wp-image-178, .wp-image-182, .wp-image-185, .wp-image-189, .wp-image-193, .wp-image-196{
     max-width: 700px;
     height: auto;
     border: solid #E5C3C3;
     border-radius: 20px;
 }
 
-.wp-image-72, .wp-image-73, .wp-image-74, .wp-image-75,  .wp-image-67, .wp-image-68, .wp-image-62, .wp-image-63, .wp-image-53, .wp-image-54, .wp-image-44, .wp-image-45, .wp-image-47, .wp-image-48, .wp-image-39, .wp-image-40, .wp-image-33, .wp-image-34, .wp-image-35,.wp-image-28, .wp-image-29, .wp-image-22, .wp-image-23, .wp-image-17, .wp-image-18, .wp-image-79, .wp-image-12{
+.wp-image-154, .wp-image-155, .wp-image-157, .wp-image-158,  .wp-image-161, .wp-image-162, .wp-image-165, .wp-image-166, .wp-image-172, .wp-image-173, .wp-image-176, .wp-image-179, .wp-image-180, .wp-image-183, .wp-image-186, .wp-image-187, .wp-image-190, .wp-image-191, .wp-image-194,.wp-image-197, .wp-image-198, .wp-image-45, .wp-image-47, .wp-image-48, .wp-image-33, .wp-image-34, .wp-image-17{
     max-width: 400px;
     height: auto;
     border: solid #E5C3C3;
@@ -290,16 +303,6 @@ h1 {
     width:99%;
     max-height: 300px;
     margin-bottom:40px;
-    cursor: pointer;
-    transition: 0.3s all ease;
-}
-
-.about-image-first img:hover {
-    transform: scale(0.9);
-}
-
-.about-image-second img:hover {
-    transform: scale(0.9);
 }
 
 /*Contact*/
