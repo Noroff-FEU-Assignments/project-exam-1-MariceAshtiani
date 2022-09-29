@@ -226,13 +226,17 @@ figure.wp-block-image.size-full {
     height: auto;
     border: solid #E5C3C3;
     border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s all ease;
 }
 
 .wp-image-154, .wp-image-155, .wp-image-157, .wp-image-158,  .wp-image-161, .wp-image-162, .wp-image-165, .wp-image-166, .wp-image-172, .wp-image-173, .wp-image-176, .wp-image-179, .wp-image-180, .wp-image-183, .wp-image-186, .wp-image-187, .wp-image-190, .wp-image-191, .wp-image-194,.wp-image-197, .wp-image-198, .wp-image-45, .wp-image-47, .wp-image-48, .wp-image-33, .wp-image-34, .wp-image-17{
     max-width: 400px;
     height: auto;
     border: solid #E5C3C3;
-    border-radius: 20px;
+    border-radius: 20px;    
+    cursor: pointer;
+    transition: 0.3s all ease;
 }
 
 .modal {
