@@ -102,10 +102,77 @@ h1 {
 
 /*Homepage*/ 
 
-.index-main {
+.image-content {
     display: grid;
-    place-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
 }
+
+.home-text {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 20px;
+}
+
+.home-text p {
+    margin: 0;
+}
+
+.image-trigger img{
+    max-width: 200px;
+    width: 60%;
+    max-height: 100px;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.image-trigger img:hover {
+    transform: scale(0.9);
+}
+
+.home-modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    z-index: 1;
+    overflow: auto;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.home-modalContent {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeModalImg {
+    width: 80%;
+    max-width: 700px;
+    animation: zoom 0.3s linear;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.latest {
+    text-align: center;
+    margin-top: 7%;
+}
+
 
 .slider {
     width: 100%;
@@ -116,7 +183,8 @@ h1 {
     flex-direction: row;
     overflow: hidden;
     border-radius: 20px;
-    margin: 20px 50px;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 
 .slide {
@@ -163,6 +231,7 @@ h1 {
     text-decoration: underline;
     font-weight: 600;
     margin-top: 20px;
+    text-align: center;
 }
 
 
@@ -191,12 +260,11 @@ figcaption {
 }
 
 
-.post-image {
-    max-width: 300px;
-    width: 90%;
+.post-image{
+    max-width: 400px;
+    width: 100%;
     border: solid #E5C3C3;
     border-radius: 20px;
-    margin: 0 auto;
 }
 
 .load-more {
@@ -211,10 +279,6 @@ figcaption {
 }
 
 /* Post specific*/ 
-
-figure.wp-block-image.size-full {
-    max-width: 400px;
-}
 
 .single-post {
     max-width: 800px;
@@ -338,7 +402,7 @@ h1 {
     grid-row-end: 4;
 }
 
-.long-input input {
+#message {
     height: 225px;
 }
 

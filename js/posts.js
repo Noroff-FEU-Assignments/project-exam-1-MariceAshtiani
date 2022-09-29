@@ -34,7 +34,7 @@ async function getPosts() {
             const images = [...extractImages(results[i].content.rendered)];
 
             const imageTags = images.map(
-                (image) => `<img src="${image.src}" alt ="image" class="post-image"/>`,
+                (image) => `<img src="${image.src}" alt ="${image.alt}" class="post-image"/>`,
             );
 
             postContainer.innerHTML += `<div class="post-preview"> 
