@@ -366,9 +366,6 @@ h1 {
 
 /*Contact*/
 
-.contact h1 {
-    margin-bottom: 100px;
-}
 .form-error {
     display: none;
     color: red;
@@ -505,7 +502,7 @@ h1 {
         display: inline-block;
         width: 35%;
         border: none;
-        margin-top: 2%;
+        margin-top: 4%;
     }
     .hamburger{
         display:block;
@@ -571,6 +568,10 @@ h1 {
 
 label, input {
     font-size: 2vmax;
+}
+
+.short-input, .long-input {
+    margin-top: 2%;
 }
 
 input {
