@@ -1,14 +1,18 @@
-const images = document.querySelectorAll(".image-trigger img");
-const modal = document.querySelector(".home-modal");
-const modalImg = document.querySelector(".homeModalImg");
+function getImageModals () {
+    const modal = document.querySelector(".home-modal");
+    const modalContent = document.querySelector(".home-modalContent");
 
-images.forEach((image) => {
-    image.addEventListener("click", () => {
-        modalImg.src = image.src;
-        modal.classList.add("appear");
+    const images = document.querySelectorAll(".image-trigger");
 
-    window.addEventListener("click", () => {
-        modal.classList.remove("appear");
+    images.forEach(function(img) {
+        img.addEventListener("click", function(event) {
+            const src = event.target.src;
+            modal.getElementsByClassName.display = "block";
+            modalContent.src = src;
+        });
     });
+
+    modal.addEventListener("click", function (event) {
+        event.target.style.display = "none";
     });
-});
+}
