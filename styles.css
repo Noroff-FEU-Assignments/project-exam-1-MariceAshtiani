@@ -98,6 +98,8 @@ a{
 
 h1 {
     font-size: 3vmax;
+    text-align: center;
+    margin-bottom:5%;
 }
 
 /*Homepage*/ 
@@ -300,10 +302,6 @@ figcaption {
 
 
 /*About*/
-h1 {
-    text-align: center;
-    margin-bottom:10%;
-}
 
 .about-context {
     display: grid;
@@ -370,6 +368,17 @@ h1 {
     display: none;
     color: red;
     font-size: 1.5vmax;
+}
+
+.contact-text {
+    max-width: 700px;
+    border: solid #E5C3C3;
+    border-radius: 50px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    font-weight: 600;;
 }
 
 #contactform {
@@ -459,108 +468,110 @@ footer {
 
 @media (max-width: 1080px) {
 
-/*About*/
-
-h1 {
-    margin-bottom: 5%;
+body p{
+    font-size: 1.7vmax;
 }
 
-    /*Contact*/
+    /*About*/
 
-    #contactform{
-        display: block;
-        max-width: 700px;
-        width: 90%;
-        margin: 0 auto;
-    }
 
-    input {
-        margin-bottom:30px;
-    }
+/*Contact*/
 
-    .form-error {
-        font-size: 2vmax;
-    }
+#contactform{
+    display: block;
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+input {
+    margin-bottom:30px;
+}
+
+.form-error {
+    font-size: 2vmax;
+}
 
 
 }
 
 @media(max-width:768px){
 
-    .navbar {
-        margin-left: 5%;
-    }
+.navbar {
+    margin-left: 5%;
+}
        
-    .logo-desktop {
-        display: none;
-    }
+.logo-desktop {
+    display: none;
+}
 
-    .logo-mobile {
-        display: inline-block;
-        width: 35%;
-        border: none;
-        margin-top: 4%;
-    }
-    .hamburger{
-        display:block;
-        float: left;
-        top: 5%;
-    }
+.logo-mobile {
+    display: inline-block;
+    width: 35%;
+    border: none;
+    margin-top: 4%;
+}
+
+.hamburger{
+    display:block;
+    float: left;
+    top: 5%;
+}
     
 
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
 
-    .nav-menu{
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        background-color: #E5C3C3;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-    }
+.nav-menu{
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #E5C3C3;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
 
-    .nav-item{
-        margin: 16px 0;
-        
-        background-color: #E5C3C3;
-    }
+.nav-item{
+    margin: 16px 0;
+    background-color: #E5C3C3;
+}
 
-    .nav-menu.active{
-        left: 0;
-    }
+.nav-menu.active{
+    left: 0;
+}
 
-    /*About*/
+/*About*/
 
-    .about-context {
-        margin: 20px;
-        display: block;
-        max-width: 700px;
-        width: 70%;
-        margin: 0 auto;
-    }
+.about-context {
+    margin: 20px;
+    display: block;
+    max-width: 700px;
+    width: 70%;
+    margin: 0 auto;
+}
     
     
-    .about-image-first, .about-image-second, .about-image-third {
-        text-align: center;
-        margin-bottom: 5%;
-    }
-    
+.about-image-first, .about-image-second, .about-image-third {
+    text-align: center;
+    margin-bottom: 5%;
+}
     
 
-    /*contact*/
-.contact h1{
-    font-size: 3vmax;
+/*contact*/
+
+.contact-text {
+    max-width: 500px;
+    width: 90%;
 }
 
 label, input {
@@ -584,7 +595,7 @@ input {
     padding-bottom: 100px;
 }
 
-    /*footer*/
+/*footer*/
 
 
 
