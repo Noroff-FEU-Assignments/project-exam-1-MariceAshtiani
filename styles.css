@@ -43,6 +43,8 @@ a{
     gap: 20px;
     position: inherit;
     max-width: 200px;
+    font-size: 1.2vmax;
+    font-weight: 400;
 }
 
 .navbar {
@@ -102,45 +104,31 @@ h1 {
     margin-bottom:5%;
 }
 
-/*Homepage*/ 
-
-.image-content {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+h2{
+    font-size: 2.5vmax;
 }
 
-.home-text {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    margin-left: 20px;
+h3 {
+    font-size: 2vmax;
+}
+
+/*Homepage*/ 
+
+.welcome-content{
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.image-container img{
+    max-width: 1500px;
+    width: 100%;
 }
 
 .home-text p {
-    margin: 0;
-}
-
-.image-trigger img{
-    max-width: 200px;
-    width: 60%;
-    max-height: 100px;
-    height: 100%;
-    cursor: pointer;
-    transition: 0.3s all ease;
-}
-
-.image-trigger img:hover {
-    transform: scale(0.9);
-}
-
-.home-modal {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none;
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .latest {
@@ -170,7 +158,7 @@ h1 {
     transition: all 0.5s;
     background-color: white;
     border: solid #E5C3C3;
-    padding: 60px;
+    padding: 10px 60px;
 }
 
 .btn {
@@ -207,14 +195,13 @@ h1 {
     font-weight: 600;
     margin-top: 20px;
     text-align: center;
+    font-size: 1.5vmax;
 }
-
-
 
 /*Blogposts*/
 
 .post-container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -224,6 +211,11 @@ h1 {
     margin: 30px;
     background-color: white;
     padding: 10px;
+}
+
+.post-content{
+    width: 90%;
+    margin: 0 auto;
 }
 
 .post-preview h2 {
@@ -236,7 +228,7 @@ figcaption {
 
 
 .post-image{
-    max-width: 400px;
+    max-width: 600px;
     width: 100%;
     border: solid #E5C3C3;
     border-radius: 20px;
@@ -260,25 +252,34 @@ figcaption {
 
 .single-post {
     max-width: 800px;
+    width: 100%;
     margin: 0 auto;
+    padding: 10px;
 }
 
 .wp-image-153, .wp-image-160,  .wp-image-164, .wp-image-168, .wp-image-169, .wp-image-171, .wp-image-175, .wp-image-178, .wp-image-182, .wp-image-185, .wp-image-189, .wp-image-193, .wp-image-196{
-    max-width: 700px;
+    max-width: 900px;
+    width: 100%;
     height: auto;
     border: solid #E5C3C3;
     border-radius: 20px;
     cursor: pointer;
     transition: 0.3s all ease;
+    position: relative;
+    left: -50%;
+    transform: translateX(50%);
 }
 
 .wp-image-154, .wp-image-155, .wp-image-157, .wp-image-158,  .wp-image-161, .wp-image-162, .wp-image-165, .wp-image-166, .wp-image-172, .wp-image-173, .wp-image-176, .wp-image-179, .wp-image-180, .wp-image-183, .wp-image-186, .wp-image-187, .wp-image-190, .wp-image-191, .wp-image-194,.wp-image-197, .wp-image-198, .wp-image-45, .wp-image-47, .wp-image-48, .wp-image-33, .wp-image-34, .wp-image-17{
-    max-width: 400px;
+    width: 100%;
     height: auto;
     border: solid #E5C3C3;
     border-radius: 20px;    
     cursor: pointer;
     transition: 0.3s all ease;
+    position: relative;
+    right: 50%;
+    transform: translateX(50%);
 }
 
 .modal, .home-modal {
@@ -509,6 +510,10 @@ h1 {
     font-size: 2.5vmax;
 }
 
+h2{
+    font-size: 2vmax;
+}
+
 .navbar {
     margin-left: 5%;
 }
@@ -551,6 +556,7 @@ h1 {
     width: 100%;
     text-align: center;
     transition: 0.3s;
+    z-index: 15;
 }
 
 .nav-item{
@@ -583,7 +589,7 @@ h1 {
 }
 
 .contact-me-btn, .learn-more-btn {
-    font-size: 1.2vmax;
+    font-size: 1.4vmax;
     width:60%;
     height: 40px;
 }

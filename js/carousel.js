@@ -25,7 +25,7 @@ async function getCarouselPost() {
 
             carouselPost.innerHTML += `<div class="slide"> 
                                         <a class="post-specific" href="blogspecific.html?id=${results[i].id}">
-                                        <h2>${results[i].title.rendered}</h2>
+                                        <h3>${results[i].title.rendered}</h3>
                                         <p>${results[i].excerpt.rendered}</p>
                                         </a>
                                         </div>`
