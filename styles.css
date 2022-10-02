@@ -151,9 +151,10 @@ h3 {
 }
 
 .slide {
-    width: 100%;
     max-width: 800px;
-    height: 350px;
+    width: 100%;
+    max-height: 350px;
+    height: 100%;
     position: absolute;
     transition: all 0.5s;
     background-color: white;
@@ -282,22 +283,24 @@ figcaption {
     transform: translateX(50%);
 }
 
-.modal, .home-modal {
+.modal{
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
     display: none;
 }
 
-.modal-content, .home-modalContent {
+.modal-content {
     position: absolute;
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
-    width: 700px;
+    max-width: 700px;
+    width:100%;
     border-radius: 0.5rem;
 }
 
@@ -453,20 +456,20 @@ footer {
 }
 
 .copyright {
-    color: white;
+    color: black;
     font-size: 1.5vmax;
     grid-column: 1;
     padding-top: 5px;
 }
 
 .social-media {
-    color: white;
+    color: black;
     font-size: 1.5vmax;
     grid-column: 2;
 }
 
 .social-media a{
-    color: white;
+    color: black;
 }
 
 @media (max-width: 1080px) {
@@ -474,6 +477,11 @@ footer {
 
 body p{
     font-size: 1.7vmax;
+}
+
+
+.slider {
+    height: 300px;
 }
 
 /*About*/
@@ -566,6 +574,10 @@ h2{
 
 .nav-menu.active{
     left: 0;
+}
+
+.slider {
+    height: 250px;
 }
 
 /*About*/
