@@ -483,9 +483,19 @@ body p{
     font-size: 1.7vmax;
 }
 
+.welcome-content {
+    margin-bottom: 20%;
+}
+
+
 
 .slider {
     height: 300px;
+    margin-bottom: 10%;
+}
+
+.view {
+    margin-bottom: 10%;
 }
 
 /*About*/
