@@ -357,16 +357,20 @@ figcaption {
 .contact-me-btn, .learn-more-btn{
     width: 50%;
     height: 50px;
+    text-decoration: none;
     color:#E5C3C3;
     background-color: black;
     border: 3px solid #E5C3C3;
-    border-radius:5px;
+    border-radius: 5px;
     display: block;
     margin: 0 auto;
-    padding: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     font-size: 1.5vmax;
     margin-top: 10%;
+    font-weight: 400;
 }
+
 
 /*Contact*/
 
@@ -490,6 +494,10 @@ body p{
     width: 95%;
 }
 
+.contact-me-btn, .learn-more-btn{
+    padding-top: 10px;
+}
+
 
 /*Contact*/
 
@@ -600,7 +608,7 @@ h2{
     margin: 0 auto;
 }
 
-.contact-me-btn, .learn-more-btn {
+.contact-me-btn, .learn-more-btn{
     font-size: 1.4vmax;
     width:60%;
     height: 40px;
