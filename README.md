@@ -1,70 +1,63 @@
 
-Project Exam 1
-Goal
+# Project Exam 1, Stylex blog
 
-To put into practice the skills learned over your first year of studies.
-Brief
+![image](https://user-images.githubusercontent.com/95356770/194610841-fc4be334-f843-405d-90a5-a77f882baf4f.png)
 
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
+A project for a blog-site.
 
-    Home page
-    About page
-    List of blog posts
-    Blog post specific pages
-    Contact page.
+## Description
 
-Home Page
+The aim for this project was to create a responsive website for a blog that i would decide, using HTML, CSS and JavaScript, and also using WordPress as a headless CMS. Some mandatory elements was a carousel on the home-page showing the latest posts, a "view more" function on the blogpost page, a blog specific page using a querystring parameter that will also change the title of the page, creating an image-modal so that when images are clicked, a modal appears with a larger image and a contact form with validation. The site needed to be responsive, and look good on all screen-sizes. 
 
-The home page should have a ‘Latest Posts’ section which uses a carousel (slider) for users to click to view more posts. For example, by default the user can see four posts, then they can click an arrow on the right to view the next four posts, and click it again to view the next four posts. The user can also click back to view results they had previously seen. This must be implemented for desktop at least, but if you want a simpler layout for mobile, you can change it from being in a carousel.
+Stages of development:
 
-
-Blog Page
-
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+- Making a plan in Trello
+- Creating a prototype in Adobe XD
+- installing WordPress on my web host and add the blogs on the admin panel
+- Building the website with HTML, CSS and JavaScript
+- installed Hotjar on the website
+- User testing
+- Made changes where i saw fit after the user testing
 
 
-Blog Specific Page
+## Built With
 
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
+### Design
 
-If images on the blog post page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
+- ![Adobe XD](https://img.shields.io/badge/Adobe%20XD-470137?style=for-the-badge&logo=Adobe%20XD&logoColor=#FF61F6)
 
+### Code Editor
 
-Contact page
+- ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-Create a contact us page, there should be 4 textboxes on this page.
+### Language
 
-    Name (Should be more than 5 characters long)
-    Email address (Must be a valid email address)
-    Subject (Should be more than 15 characters long)
-    Message content (Should be more than 25 characters long)
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
-WordPress
+### CMS
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data.
+- ![WordPress](https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white)
 
-The project has two aspects:
+## Getting Started
 
-    API from your WordPress installation
-    Your website built with HTML, CSS and JavaScript
+1. Clone the repo
 
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+```bash
 
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
-Level 1 Process
+```
 
-    Decide on the theme for the blog you’re going to make
-    Create a prototype of the website
-    Install WordPress on your web host and add the blogs on the admin panel.
-    Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-    Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-    Install Hotjar on your website.
-    Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-    Write a report documenting your project (template provided in this repository).
-    Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
+2. Open with Visual Studio Code, use Live server (VSC extension) to view the site.
 
-Level 2 Process (optional)
+Deployed site: https://stylexblog.netlify.app/index.html
 
-    You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for.
-    Post the data from the contact form to WordPress so you have the details saved.
+## Contributing
+
+The only contribution this project needs is feedback on how the page works for you. Anything that will help me improve this page in the future is highly recommended and appriciated. 
+
+## Contact
+
+- [<img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">](https://discordapp.com/users/900117499662708807)
+
+- [<img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">](mailto:marice6795@gmail.com)
