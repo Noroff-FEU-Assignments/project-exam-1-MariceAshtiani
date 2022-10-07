@@ -45,7 +45,7 @@ Stages of development:
 1. Clone the repo
 
 ```bash
-
+https://github.com/Noroff-FEU-Assignments/project-exam-1-MariceAshtiani.git
 ```
 
 2. Open with Visual Studio Code, use Live server (VSC extension) to view the site.
